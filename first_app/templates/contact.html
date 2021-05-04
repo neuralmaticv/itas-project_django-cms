@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact | {% endblock title %}
+
+
+{% block head %}
+
+<section class="section-contact">
+    <div class="contact">
+        <h2>Kontaktirajte nas</h2>
+        <div class="border"></div>
+        <form class="contact-form" action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" class="contact-input" placeholder="Ime" required name="name">
+            <input type="email" class="contact-input" placeholder="E-mail" required name="email">
+            <input type="text" class="contact-input" placeholder="Predmet poruke" required name="subject">
+            <textarea type="text" class="contact-input" placeholder="Poruka" required name="message"></textarea>
+            <button class="contact-button" type="submit">Posalji</button>
+        </form>
+        {% if name %}
+            <div id="msg-info">
+                <h2>Hvala {{name}} &#128591 </h2>
+                <p>Zaprimili smo Vaš email. Uskoro očekujte naš odgovor!</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock head %}

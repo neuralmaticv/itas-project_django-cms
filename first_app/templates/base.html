@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{% endblock title %} DigiTalk</title>
+  <link rel="icon" href="{% static 'images/digitalk-logo.ico' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="content-wrapper">
+      <header class="header">
+        <div class="header-container">
+          <a href="" class="header-logo">DigiTalk</a>
+
+          <div class="header-icon">
+            <i class='bx bx-menu' id='header-bars'></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav" id="navbar">
+        <nav class="nav-container">
+          <div>
+            <div class="company-logo">
+              <i class='bx bx-equalizer nav-icon'></i>
+              <span class="nav-logo-name">DigiTalk</span>
+            </div>
+
+            <div class="nav-list">
+              <div class="nav-items">
+                <a href="{% url 'home' %}" class="nav-link">
+                  <i class='bx bx-home nav-icon'></i>
+                  <span class="nav-name">Pocetna</span>
+                </a>
+
+                <a href="{% url 'about' %}" class="nav-link">
+                  <i class='bx bx-info-circle nav-icon'></i>
+                  <span class="nav-name">O nama</span>
+                </a>
+                <a href="{% url 'blog' %}" class="nav-link">
+                  <i class='bx bx-message-detail nav-icon'></i>
+                  <span class="nav-name">Blog</span>
+                </a>
+                <a href="{% url 'contact' %}" class="nav-link">
+                  <i class='bx bx-mail-send nav-icon'></i>
+                  <span class="nav-name">Kontakt</span>
+                </a>
+                <a href="{% url 'careers' %}" class="nav-link">
+                  <i class='bx bx-network-chart nav-icon'></i>
+                  <span class="nav-name">Karijere</span>
+                </a>
+              </div>
+
+              <div class="nav-items">
+                <a class="nav-link" target="_blank" title="Follow us on Twitter!" href="https://twitter.com/">
+                  <i class='bx bxl-twitter nav-icon'></i>
+                  <span class="nav-name">Twitter</span>
+                </a>
+
+                <a class="nav-link" target="_blank" title="Follow us on Youtube!" href="https://www.youtube.com/">
+                  <i class='bx bxl-youtube nav-icon'></i></i>
+                  <span class="nav-name">YouTube</span>
+                </a>
+
+                <a class="nav-link" target="_blank" title="Follow us on LinkedIn!" href="https://www.linkedin.com/">
+                  <i class='bx bxl-linkedin-square nav-icon'></i>
+                  <span class="nav-name">Linkedin</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div id="content">
+      {% block head %}
+
+          <h1>Some heading...</h1>
+      
+      {% endblock head %}
+      </div>
+    </div>
+    <!--
+        <img src='{% static  'images/nekaFotografija.png' %}'>
+ -->
+
+    <footer class="footer">
+      <p>&copy; 2021 | vlado.codes
+        <a href="https://github.com/vladocodes" target="_blank"><i class='bx bxl-github'></i></a> |
+        Sva prava zadržana.
+      </p>
+    </footer>
+  </div>
+
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

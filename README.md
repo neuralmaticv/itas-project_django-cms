@@ -33,12 +33,10 @@ Kreirajte virtuelno okruzenje
 py -m venv env
 ```
 
-Pozicionirajte se u direktorijum Scripts i unesite
+Da aktivirate virtuelno okruzenje pozicionirajte se u direktorijum Scripts i unesite 
 ```bash
 activate
 ```
-kako biste aktivirali virtuelno okruzenje
-
 
 Primjenite potrebne migracije
 
@@ -56,7 +54,7 @@ Projekat je dostupan na http://localhost:8000/
 
 Da obustavite rad servera unesite CTRL + BREAK
 
-Za deaktiviranje virtuelnog okruzenja
+Za deaktiviranje virtuelnog okruzenja unesite
 
 ```bash
 deactivate

@@ -1,5 +1,7 @@
-# Tema: Algoritmi za prepoznavanje govora | Topic: Algorithms for Speech Recognition
-Projekat za predmet Informacione tehnologije i drustvo, College project for Information Technology and Society course 
+# Projekat za predmet Informacione tehnologije i drustvo
+
+
+# Pokretanje projekta lokalno
 
 Prvo, klonirajte ovaj repozitorijum na vasu lokalnu masinu
 
@@ -60,6 +62,5 @@ Za deaktiviranje virtuelnog okruzenja unesite
 deactivate
 ```
 
-# Licenca | License
+# Licenca
 Ovaj kod se nalazi pod [MIT licencom].(https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).  
-The source code is released under the [MIT License].(https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).

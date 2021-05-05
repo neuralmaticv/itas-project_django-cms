@@ -24,11 +24,11 @@ To install Django and all necessary requirements, run the following command:
 pip install -r requirements.txt
 ```
 
-To create virtual environment use venv command:
+To create virtual environment use *venv* command:
 ```bash
 py -m venv env
 ```
-here we creates a virtual environment in a folder named env, but you can specify any name for the folder.
+here we creates a virtual environment in a folder named *env*, but you can specify any name for the folder.
 
 Now activate the virtual environment with:
 ```bash

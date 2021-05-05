@@ -56,7 +56,7 @@ py manage.py runserver
 
 Projekat je dostupan na http://localhost:8000/
 
-Da obustavite rad servera unesite CTRL + BREAK
+Da obustavite rad servera unesite `CTRL + BREAK`
 
 Za deaktiviranje virtuelnog okruzenja unesite:
 

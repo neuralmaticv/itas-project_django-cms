@@ -241,6 +241,7 @@ a {
 }
 .about-heading h2 {
   margin-top: 15vh;
+  font-family: var(--ff-heading);
   font-size: 6vw;
   color: var(--clr-dark);
   margin-bottom: 0.2em;
@@ -254,25 +255,56 @@ a {
   max-width: 550px;
   margin: 0 auto;
   text-align: center;
+  padding: 200px 0;
 }
 .about-info h2 {
   font-weight: var(--fw-bold);
-  font-size: 2rem;
-  padding: 25px;
+  font-size: 2.5rem;
+  color: var(--clr-blue);
+  font-family: var(--ff-heading);
+  margin-bottom: -100px;
 }
 .about-info img {
+  padding-top: 150px;
   width: 100%;
   height: auto;
 }
 .about-description {
   color: var(--clr-blue);
   font-size: 1.2rem;
+  font-family: var(--ff-heading);
+  letter-spacing: 1.2px;
 }
 .about-text {
-  padding: 25px 0 25px 0;
+  padding-top: 25px;
   color: var(--clr-accent);
   text-align: justify;
 }
+.about-question {
+  margin: 100px 0 50px 0;
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--clr-blue);
+}
+.about-link {
+  font-family: var(--ff-heading);
+  letter-spacing: 1.2px;
+  padding: 1vh;
+  background-color: var(--clr-light);
+  color: var(--clr-blue);
+  border: 3px solid var(--clr-blue);
+  border-radius: 20px 10px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.about-link:hover {
+  border-color: var(--clr-light);
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
+}
+
 
 
 

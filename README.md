@@ -63,4 +63,4 @@ deactivate
 ```
 
 # Licenca
-Ovaj kod se nalazi pod [MIT licencom](https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).  
+Ovaj projekat se nalazi pod [MIT licencom](https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).  

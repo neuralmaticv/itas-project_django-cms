@@ -5,7 +5,7 @@ Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/mas
 
 # Pokretanje projekta lokalno
 
-Prvo, klonirajte ovaj repozitorijum na vasu lokalnu masinu
+Prvo, klonirajte ovaj repozitorijum na vasu lokalnu masinu pomoću komande:
 
 ```bash
 git clone https://github.com/vladocodes/PMF_ITAS_CMS
@@ -13,42 +13,42 @@ git clone https://github.com/vladocodes/PMF_ITAS_CMS
 
 Ukoliko nemate instaliran Python preuzmite posljednju verziju sa [Python sajta](https://www.python.org/downloads/windows/) i instalirajte je
 
-Uvjerite se da imate instaliranu noviju verziju (Python 3.x.x)
+Uvjerite se da imate instaliranu noviju verziju (Python 3.x.x) pomoću komande:
 
 ```bash
 py --version
 ```
 
-Uvjerite se da imate i najnoviju verziju pip-a
+Uvjerite se da imate i najnoviju verziju pip-a pomoću komande:
 
 ```bash
 py -m pip --version
 ```
 
-Instalirajte Django
+Instalirajte Django:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Kreirajte virtuelno okruzenje
+Kreirajte virtuelno okruzenje:
 
 ```bash
 py -m venv env
 ```
 
-Da aktivirate virtuelno okruzenje pozicionirajte se u direktorijum Scripts i unesite 
+Da aktivirate virtuelno okruzenje pozicionirajte se u direktorijum Scripts i unesite:
 ```bash
 activate
 ```
 
-Primjenite potrebne migracije
+Primjenite potrebne migracije:
 
 ```bash
 py manage.py migrate
 ```
 
-Pokrenite server
+Pokrenite lokalni web server:
 
 ```bash
 py manage.py runserver
@@ -58,7 +58,7 @@ Projekat je dostupan na http://localhost:8000/
 
 Da obustavite rad servera unesite CTRL + BREAK
 
-Za deaktiviranje virtuelnog okruzenja unesite
+Za deaktiviranje virtuelnog okruzenja unesite:
 
 ```bash
 deactivate

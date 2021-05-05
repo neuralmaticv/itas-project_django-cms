@@ -1,17 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %} Home | {% endblock title %}
+{% block title %} Početna | {% endblock title %}
 
 
 
 {% block head %}
 <div class="home-heading">
     <h1 class="home-title">Mi razvijamo proizvode za bolju budućnost</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, molestias cumque illum reiciendis optio, cum
+        libero, minus recusandae quo eligendi harum qui animi fuga labore sed laborum delectus assumenda voluptatibus
+        possimus odit nisi. Deleniti iure animi, ex officiis quibusdam id quasi illo aspernatur reiciendis sed odit
+        laboriosam voluptatem veritatis atque corporis incidunt cum consequuntur. Nulla ea debitis corrupti temporibus
+        cupiditate reiciendis veniam, quae voluptas maiores quibusdam fugit aut labore officia et quaerat perferendis
+        qui dolorem beatae, dolore sequi, accusamus aperiam. Atque alias nulla excepturi earum optio mollitia,
+        consequatur necessitatibus incidunt aperiam tempore sint ut nobis eius odio ipsa harum assumenda?</p>
 </div>
 <div class="home-grid">
     <div class="home-grid-item someSubject">
         <i class='bx bx-equalizer'></i>
-        <h2>HEADING</h2>
+        <img src='{% static  'images/home-design1.png' %}'>
+        <h2>Istraživanja iz više oblasti</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
             Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
             ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
@@ -21,9 +30,49 @@
             molestiae a iure totam cupiditate excepturi repudiandae odit.
         </p>
     </div>
-    <div class="story-grid-item someSubject">
+    <div class="home-grid-item someSubject">
         <i class='bx bx-git-repo-forked'></i>
-        <h2>HEADING
+        <img src='{% static  'images/home-design3.png' %}'>
+        <h2>Open source</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
+            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
+            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
+            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
+            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
+            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
+            molestiae a iure totam cupiditate excepturi repudiandae odit.
+        </p>
+    </div>
+    <div class="home-grid-item someSubject">
+        <i class='bx bx-microphone'></i>
+        <img src='{% static  'images/home-design6.png' %}'>
+        <h2>Proizvodi</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
+            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
+            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
+            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
+            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
+            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
+            molestiae a iure totam cupiditate excepturi repudiandae odit.
+        </p>
+    </div>
+    <div class="home-grid-item someSubject">
+        <i class='bx bx-data'></i>
+        <img src='{% static  'images/home-design4.png' %}'>
+        <h2>Skupovi podataka</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
+            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
+            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
+            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
+            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
+            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
+            molestiae a iure totam cupiditate excepturi repudiandae odit.
+        </p>
+    </div>
+    <div class="home-grid-item someSubject">
+        <i class='bx bx-microchip'></i>
+        <img src='{% static  'images/home-design5.png' %}'>
+        <h2>Razvoj AI sistema
         </h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
             Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
@@ -34,46 +83,10 @@
             molestiae a iure totam cupiditate excepturi repudiandae odit.
         </p>
     </div>
-    <div class="story-grid-item someSubject">
-        <i class='bx bxl-redux'></i>
-        <h2>HEADING</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
-            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
-            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
-            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
-            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
-            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
-            molestiae a iure totam cupiditate excepturi repudiandae odit.
-        </p>
-    </div>
-    <div class="story-grid-item someSubject">
-        <i class='bx bx-microchip'></i>
-        <h2>HEADING</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
-            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
-            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
-            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
-            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
-            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
-            molestiae a iure totam cupiditate excepturi repudiandae odit.
-        </p>
-    </div>
-    <div class="story-grid-item someSubject">
-        <i class='bx bx-microchip'></i>
-        <h2>HEADING
-        </h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
-            Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
-            ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad
-            numquam. Officia voluptates tenetur nam quae optio qui, quia rerum voluptatum esse
-            repellendus, odit doloribus perspiciatis fuga id quo laboriosam facere quisquam sit beatae
-            assumenda iste ipsa ab saepe commodi? Blanditiis, laborum illo ullam voluptatum possimus et,
-            molestiae a iure totam cupiditate excepturi repudiandae odit.
-        </p>
-    </div>
-    <div class="story-grid-item someSubject">
+    <div class="home-grid-item someSubject">
         <i class='bx bxl-audible'></i>
-        <h2>HEADING</h2>
+        <img src='{% static  'images/home-design2.png' %}'>
+        <h2>Saradnja sa gigantima</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex id sit voluptatem corporis.
             Sunt accusantium id, omnis commodi recusandae impedit laudantium veniam vel odit architecto
             ipsum nulla illum quasi vitae eum sequi magnam magni rerum voluptates quisquam maiores ad

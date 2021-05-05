@@ -1,5 +1,7 @@
 # Projekat za predmet Informacione tehnologije i drustvo
 
+Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/README.en.md).
+
 
 # Pokretanje projekta lokalno
 

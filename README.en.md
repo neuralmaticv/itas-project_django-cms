@@ -47,7 +47,7 @@ py manage.py runserver
 
 The project will be available at http://localhost:8000/
 
-To quit the local web server press `CTRL-BREAK`.
+To quit the local web server press `CTRL + BREAK`.
 
 If you want to stop using the virtual environment and go back to your global Python, run the following command:
 ```bash

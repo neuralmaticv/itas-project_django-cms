@@ -6,6 +6,24 @@
 
 {% block head %}
 
-<h1>Blog stranica</h1>
+<h1 id="blogPage-title">Blog stranica</h1>
+
+<div class="tagline">
+    <a href="#" id="a-stav" class="selected">stav</a>
+    <a href="#" id="a-razvoj" class="">razvoj</a>
+    <a href="#" id="a-licno" class="">lično</a>
+    <a id="menu" href="#" onclick="showDiv('search-form');">?</a>
+</div>
+
+<ul class="blog-posts">
+
+    {% for post in object_list %}
+    <li>
+        <span class="blog-post-author">{{ post.author.first_name }} {{ post.author.last_name }}</span>
+        <a class="blog-post-link" href="{% url 'blog-post' post.pk %}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
 
 {% endblock head %}

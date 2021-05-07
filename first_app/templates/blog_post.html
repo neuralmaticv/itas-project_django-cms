@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ post.title }} {% endblock title %}
+
+
+
+{% block head %}
+
+<h1>{{ post.title }}</h1>
+<h5>Autor: {{ post.author.first_name }} {{ post.author.last_name }}  {{ post.date }}</h5>
+<p>
+    {{ post.body|safe }}
+</p>
+
+<a id="btn-back" href="{% url 'blog' %}"><i class='bx bxs-chevrons-left' ></i>Nazad na Blog stranicu</a>
+{% endblock head %}

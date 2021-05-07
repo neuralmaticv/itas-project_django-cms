@@ -1,5 +1,9 @@
+from first_app.models import Post
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.views.generic import ListView, DetailView
+from .models import Post
+from first_app import models
 
 # Create your views here.
 def homePage(request):
@@ -26,8 +30,19 @@ def contactPage(request):
     else:
         return render(request, 'contact.html', {})
 
+"""
 def blogPage(request):
     return render(request, 'blog.html', {})
+"""
+
+class blogView(ListView):
+    model = Post
+    template_name = 'blog.html'
+    ordering = ['-id']
+
+class postDetailView(DetailView):
+    model = Post
+    template_name = 'blog_post.html'
 
 def careersPage(request):
     return render(request, 'careers.html', {})

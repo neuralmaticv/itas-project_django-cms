@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'first_app',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,11 @@ EMAIL_USE_TLS = True
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Ckeditor configs
+CKEDITOR_CONFIGS = {
+    'default': {
+    'width': '100%',
+   }, 
+}

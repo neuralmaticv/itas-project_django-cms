@@ -5,12 +5,28 @@
 
 
 {% block head %}
+<div class="blog-page">
 
-<h1>{{ post.title }}</h1>
-<h5>Autor: {{ post.author.first_name }} {{ post.author.last_name }}  {{ post.date }}</h5>
-<p>
-    {{ post.body|safe }}
-</p>
+    <article class="post">
+        <header class="post-header">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-date">/ {{ post.date }}</p>
+            <p class="post-author">/ {{ post.author.first_name }} {{ post.author.last_name }}</p>
 
-<a id="btn-back" href="{% url 'blog' %}"><i class='bx bxs-chevrons-left' ></i>Nazad na Blog stranicu</a>
+            <ul class="post-share">
+                <li><i class='bx bx-share'></i></li>
+                <li><a class="share-btn" href="" target="_blank" title="Reddit">Re</a></li>           
+                <li><a class="share-btn" href="" target="_blank" title="Facebook">Fb</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="Twitter">Tw</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="Email">Em</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="LinkedIn">Ln</a></li>
+            </ul>
+        </header>
+
+        {{ post.body|safe }}
+    
+    </article>
+
+    <a id="btn-back" href="{% url 'blog' %}"><i class='bx bxs-chevrons-left'></i>Nazad na Blog stranicu</a>
+</div>
 {% endblock head %}

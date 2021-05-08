@@ -13,3 +13,12 @@ class postForm(forms.ModelForm):
             'author': forms.Select(attrs={'class': 'add-post-form'}),
             'body': forms.Textarea(attrs={'class': 'add-post-form'}),
         }
+
+class editForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('title', 'body')
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'add-post-form'}),
+            'body': forms.Textarea(attrs={'class': 'add-post-form'}),
+        }

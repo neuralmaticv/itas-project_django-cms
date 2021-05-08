@@ -1,10 +1,11 @@
 from first_app.models import Post
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from first_app import models
-from .forms import postForm
+from .forms import postForm, editForm
+from django.urls import reverse_lazy
 
 # Create your views here.
 def homePage(request):
@@ -49,6 +50,16 @@ class addPostView(CreateView):
     model = Post
     form_class = postForm
     template_name = 'blog_add_post.html'
+
+class editPostView(UpdateView):
+    model = Post
+    form_class = editForm
+    template_name = 'blog_edit_post.html'
+
+class deletePostView(DeleteView):
+    model = Post
+    template_name = 'blog_delete_post.html'
+    success_url = reverse_lazy('blog')
 
 def careersPage(request):
     return render(request, 'careers.html', {})

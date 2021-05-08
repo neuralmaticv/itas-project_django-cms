@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Brisanje objave | {% endblock title %}
+
+{% block head %}
+
+<div class="delete-post">
+    <h2>Obriši objavu</h2>
+    <h3>"{{ post.title }}"</h3>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <strong>Jeste li sigurni?</strong><br>
+        <button>Obriši</button>
+    </form>
+</div>
+
+{% endblock head %}

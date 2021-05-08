@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %} Dodavanje objave | {% endblock title %}
+{% block title %} Uređivanje objave | {% endblock title %}
 
 {% block head %}
 
 <div class="add-post-form">
-    <h1>Dodaj objavu</h1>
+    <h1>Uredi objavu</h1>
 
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         {{ form.media }}
-        <button>Objavi</button>
+        <button>Sačuvaj</button>
     </form>
 </div>
 

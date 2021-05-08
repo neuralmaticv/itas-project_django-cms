@@ -528,6 +528,45 @@ a {
   text-transform: uppercase;
 }
 
+.add-post-form {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.add-post-form h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  color: var(--clr-blue);
+  border-bottom: 5px solid var(--clr-light-gray);
+  padding: 25px;
+}
+.add-post-form {
+  padding: 5px;
+}
+.add-post-form label {
+  color: var(--clr-accent);
+}
+.add-post-form button {
+  float: right;
+  border: 0;
+  color: var(--clr-blue);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--clr-blue);
+  padding: 12px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.add-post-form button:hover {
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
+  transition: ease 0.3s;
+}
+
+
 
 /*---------- CONTACT ----------*/
 .section-contact {

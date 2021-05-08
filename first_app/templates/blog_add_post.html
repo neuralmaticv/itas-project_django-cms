@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Dodavanje posta | {% endblock title %}
+
+{% block head %}
+
+<div class="add-post-form">
+    <h1>Dodaj post</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Objavi</button>
+    </form>
+</div>
+
+{% endblock head %}

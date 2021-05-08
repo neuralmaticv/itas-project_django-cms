@@ -1,9 +1,10 @@
 from first_app.models import Post
 from django.shortcuts import render
 from django.core.mail import send_mail
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 from first_app import models
+from .forms import postForm
 
 # Create your views here.
 def homePage(request):
@@ -43,6 +44,11 @@ class blogView(ListView):
 class postDetailView(DetailView):
     model = Post
     template_name = 'blog_post.html'
+
+class addPostView(CreateView):
+    model = Post
+    form_class = postForm
+    template_name = 'blog_add_post.html'
 
 def careersPage(request):
     return render(request, 'careers.html', {})

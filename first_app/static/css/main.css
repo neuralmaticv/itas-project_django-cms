@@ -874,3 +874,9 @@ textarea.contact-input {
   }
 
 }
+
+@media only screen and (max-width: 768px) {
+  .nav-list {
+    row-gap: 3rem;
+  }
+}

@@ -99,6 +99,20 @@ a {
   padding: 1rem 1rem 0;
 }
 
+.error-404 {
+  text-align: center;
+}
+.error-404 img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.error-404 p {
+  font-size: 2.5rem;
+  font-family: var(--ff-heading);
+  color: var(--clr-blue);
+}
 
 
 /*---------- HEADER ----------*/

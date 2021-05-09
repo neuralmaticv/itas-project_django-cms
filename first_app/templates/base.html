@@ -45,13 +45,21 @@
                   <i class='bx bx-info-circle nav-icon'></i>
                   <span class="nav-name">O nama</span>
                 </a>
-                <a href="{% url 'blog' %}" class="nav-link">
-                  <i class='bx bx-message-detail nav-icon'></i>
-                  <span class="nav-name">Blog</span>
-                </a>
-                <a href="{% url 'add_post' %}" class="nav-link">
-                  <span class="nav-name">Dodaj objavu</span>
-                </a>
+
+                <div class="nav-link-dropdown">
+                  <a href="{% url 'blog' %}" class="nav-link">
+                    <i class='bx bx-message-detail nav-icon'></i>
+                    <span class="nav-name">Blog</span>
+                    <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
+                  </a>
+
+                  <div class="dropdown-collapse">
+                    <div class="dropdown-content">
+                      <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
+                    </div>
+                  </div>
+                </div>
+
                 <a href="{% url 'contact' %}" class="nav-link">
                   <i class='bx bx-mail-send nav-icon'></i>
                   <span class="nav-name">Kontakt</span>
@@ -101,7 +109,8 @@
         <a href="https://github.com/vladocodes" target="_blank">vlado.codes <i class='bx bxl-github'></i></a>
       </p>
       <div class="copyright">
-        Sadržaj je dostupan pod <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4.0</a> licencom.
+        Sadržaj je dostupan pod <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4.0</a>
+        licencom.
       </div>
     </footer>
   </div>

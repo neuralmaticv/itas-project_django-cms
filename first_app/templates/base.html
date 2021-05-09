@@ -46,19 +46,26 @@
                   <span class="nav-name">O nama</span>
                 </a>
 
-                <div class="nav-link-dropdown">
-                  <a href="{% url 'blog' %}" class="nav-link">
-                    <i class='bx bx-message-detail nav-icon'></i>
-                    <span class="nav-name">Blog</span>
-                    <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
-                  </a>
+                {% if user.is_authenticated %}
+                  <div class="nav-link-dropdown">
+                    <a href="{% url 'blog' %}" class="nav-link">
+                      <i class='bx bx-message-detail nav-icon'></i>
+                      <span class="nav-name">Blog</span>
+                      <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
+                    </a>
 
-                  <div class="dropdown-collapse">
-                    <div class="dropdown-content">
-                      <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
+                    <div class="dropdown-collapse">
+                      <div class="dropdown-content">
+                        <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                {% else %}
+                  <a href="{% url 'blog' %}" class="nav-link">
+                      <i class='bx bx-message-detail nav-icon'></i>
+                      <span class="nav-name">Blog</span>
+                  </a>
+                {% endif %}
 
                 <a href="{% url 'contact' %}" class="nav-link">
                   <i class='bx bx-mail-send nav-icon'></i>
@@ -86,6 +93,26 @@
                   <i class='bx bxl-linkedin-square nav-icon'></i>
                   <span class="nav-name">LinkedIn</span>
                 </a>
+
+
+
+                {% if user.is_authenticated %}
+                  <a href="{% url 'logout' %}" class="nav-link">
+                    <i class='bx bx-log-out nav-icon'></i>
+                    <span class="nav-name">Odjava</span>
+                  </a>
+                {% else %}
+                  <a href="{% url 'register' %}" class="nav-link">
+                    <i class='bx bxs-user-plus nav-icon'></i>
+                    <span class="nav-name">Registracija</span>
+                  </a>
+
+                  <a href="{% url 'login' %}" class="nav-link">
+                    <i class='bx bx-log-in nav-icon'></i>
+                    <span class="nav-name">Prijava</span>
+                  </a>
+                {% endif %}
+
               </div>
             </div>
           </div>

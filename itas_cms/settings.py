@@ -148,3 +148,6 @@ CKEDITOR_CONFIGS = {
     'width': '100%',
    }, 
 }
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

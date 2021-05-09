@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Prijava | {% endblock title %}
+
+{% block head %}
+
+<div class="add-post-form">
+    <h1>Prijava</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Prijavi se</button>
+    </form>
+</div>
+
+{% endblock head %}

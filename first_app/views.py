@@ -6,6 +6,8 @@ from .models import Post
 from first_app import models
 from .forms import postForm, editForm
 from django.urls import reverse_lazy
+from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 def homePage(request):
@@ -32,10 +34,8 @@ def contactPage(request):
     else:
         return render(request, 'contact.html', {})
 
-"""
-def blogPage(request):
-    return render(request, 'blog.html', {})
-"""
+def careersPage(request):
+    return render(request, 'careers.html', {})
 
 class blogView(ListView):
     model = Post
@@ -61,5 +61,8 @@ class deletePostView(DeleteView):
     template_name = 'blog_delete_post.html'
     success_url = reverse_lazy('blog')
 
-def careersPage(request):
-    return render(request, 'careers.html', {})
+class userRegisterView(generic.CreateView):
+    form_class = UserCreationForm
+    template_name = 'registration/register.html'
+    success_url = reverse_lazy('login')
+    

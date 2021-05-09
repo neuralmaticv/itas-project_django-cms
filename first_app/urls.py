@@ -12,5 +12,6 @@ urlpatterns = [
     path('blog/add_post/', views.addPostView.as_view(), name='add_post'),
     path('blog/edit_post/<int:pk>', views.editPostView.as_view(), name='edit_post'),
     path('blog/<int:pk>/delete', views.deletePostView.as_view(), name='delete_post'),
-    path('careers/',  views.careersPage, name = 'careers'), 
+    path('careers/',  views.careersPage, name = 'careers'),
+    path('register/', views.userRegisterView.as_view(), name='register'),
 ]

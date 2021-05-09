@@ -1,18 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} Dodavanje objave | {% endblock title %}
 
 {% block head %}
 
-<div class="add-post-form">
-    <h1>Dodaj objavu</h1>
+{% if user.is_authenticated %}
+    <div class="add-post-form">
+        <h1>Dodaj objavu</h1>
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {{ form.media }}
-        <button>Objavi</button>
-    </form>
-</div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.media }}
+            <button>Objavi</button>
+        </form>
+    </div>
+{% else %}
+    <div class="error-404">
+        <img src='{% static  'images/err404.png' %}'>
+        <p>lost in space.</p>
+        <a id="btn-back" href="{% url 'home' %}"><i class='bx bxs-chevrons-left'></i>Nazad na Početnu stranicu</a>
+    </div>
+{% endif %}
+
 
 {% endblock head %}

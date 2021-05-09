@@ -1,18 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} Brisanje objave | {% endblock title %}
 
 {% block head %}
 
-<div class="delete-post">
-    <h2>Obriši objavu</h2>
-    <h3>"{{ post.title }}"</h3>
+{% if user.is_authenticated %}
+    <div class="delete-post">
+        <h2>Obriši objavu</h2>
+        <h3>"{{ post.title }}"</h3>
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        <strong>Jeste li sigurni?</strong><br>
-        <button>Obriši</button>
-    </form>
-</div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <strong>Jeste li sigurni?</strong><br>
+            <button>Obriši</button>
+        </form>
+    </div>
+{% else %}
+    <div class="error-404">
+        <img src='{% static  'images/err404.png' %}'>
+        <p>lost in space.</p>
+        <a id="btn-back" href="{% url 'home' %}"><i class='bx bxs-chevrons-left'></i>Nazad na Početnu stranicu</a>
+    </div>
+{% endif %}
 
 {% endblock head %}

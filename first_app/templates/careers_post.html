@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ object.title }} | {% endblock title %}
+
+{% block head %}
+
+<div class="blog-page">
+    <article class="post">
+        <header class="post-header">
+            <h1 class="post-title job-title">{{ object.title }}</h1>
+
+            <a href="{% url 'contact' %}"><button class="btn-apply">Apply now</button></a>
+
+            <div class="job-share">
+            <ul class="post-share">
+                <li><i class='bx bx-share'></i></li>
+                <li><a class="share-btn" href="" target="_blank" title="Reddit">Re</a></li>           
+                <li><a class="share-btn" href="" target="_blank" title="Facebook">Fb</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="Twitter">Tw</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="Email">Em</a></li>
+                <li><a class="share-btn" href="" target="_blank" title="LinkedIn">Ln</a></li>
+            </ul>
+            </div>
+            
+            <div class="job-summary">
+                <p><span class="job-label">Location</span> <span class="job-text">{{ object.location }}</span></p>
+                <p><span class="job-label">Date posted</span> <span class="job-text">{{ object.date }}</span></p>
+                <p><span class="job-label">Profession</span> <span class="job-text">{{ object.profession }}</span></p>
+                <p><span class="job-label">Employment type</span> <span class="job-text">{{ object.employmentType }}</span></p>
+            </div>
+        </header>
+
+        {{ object.body|safe }}
+
+        <a href="{% url 'contact' %}"><button class="btn-apply">Apply now</button></a>
+    </article>
+</div>
+
+{% endblock head %}

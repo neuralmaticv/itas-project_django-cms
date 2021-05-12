@@ -2,10 +2,22 @@
 
 {% block title %} Karijere | {% endblock title %}
 
-
-
 {% block head %}
 
-<h1>Trenutno otvorene pozicije</h1>
+<div class="blog-page careers-page">
+    <h1>Trenutno otvorene pozicije</h1>
+
+    <ul class="blog-posts careers-list">
+        {% for object in object_list %}
+            <li>
+                <div class="job-opportunity">
+                    <a class="blog-post-link job-link" href="{% url 'careers_post' object.pk %}">{{ object.title }}</a>
+                    <p class="job-info">{{ object.location }} | {{ object.profession }} | {{ object.date }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
 
 {% endblock head %}

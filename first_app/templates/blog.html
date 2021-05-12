@@ -2,9 +2,8 @@
 
 {% block title %} Blog | {% endblock title %}
 
-
-
 {% block head %}
+
 <div class="blog-page">
     <h1 id="blog-page-title">Blog stranica</h1>
 
@@ -16,15 +15,14 @@
     </div>
 
     <ul class="blog-posts">
-
         {% for post in object_list %}
-        <li>
-            <span class="blog-post-author">{{ post.author.first_name }} {{ post.author.last_name }}</span>
-            <a class="blog-post-link" href="{% url 'blog_post' post.pk %}">{{ post.title }}</a>
-        </li>
+            <li>
+                <span class="blog-post-author">{{ post.author.first_name }} {{ post.author.last_name }}</span>
+                <a class="blog-post-link" href="{% url 'blog_post' post.pk %}">{{ post.title }}</a>
+            </li>
         {% endfor %}
-        
     </ul>
+    
 </div>
 
 {% endblock head %}

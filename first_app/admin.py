@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Post, CareersPost
+from .models import Category, Post, CareersPost
 
-myModels = [Post, CareersPost]
+myModels = [Post, CareersPost, Category]
 
 admin.site.register(myModels)

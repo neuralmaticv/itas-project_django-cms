@@ -1,9 +1,9 @@
-from typing import List
+from typing import List, cast
 from first_app.models import Post
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import CareersPost, Post
+from .models import CareersPost, Category, Post
 from first_app import models
 from .forms import postForm, editForm
 from django.urls import reverse_lazy
@@ -54,6 +54,17 @@ class blogView(ListView):
     template_name = 'blog.html'
     ordering = ['-id']
 
+    def get_context_data(self, *args, **kwargs):
+        cat_list = Category.objects.all()[:5]
+        context = super(blogView, self).get_context_data(*args, **kwargs)
+        context["cat_list"] = cat_list
+        return context
+
+
+class blogCatsView(ListView):
+    model = Category
+    template_name = 'blog_cats.html'
+
 
 class postDetailView(DetailView):
     model = Post
@@ -76,6 +87,13 @@ class deletePostView(DeleteView):
     model = Post
     template_name = 'blog_delete_post.html'
     success_url = reverse_lazy('blog')
+
+
+def categoryView(request, categories):
+    cats = categories.replace('-', ' ')
+    category_posts = Post.objects.filter(category = cats)
+    context = {'categories': cats, 'category_posts': category_posts}
+    return render(request, 'categories.html', context)
 
 
 class userRegisterView(generic.CreateView):

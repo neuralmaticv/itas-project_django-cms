@@ -5,12 +5,12 @@
 {% block head %}
 
 <div class="blog-page">
-    <h1 id="blog-page-title">Blog stranica</h1>
+    <h1 class="blog-page-title">Blog</h1>
 
     <div class="tagline">
-        <a href="#" id="a-stav" class="selected">stav</a>
-        <a href="#" id="a-razvoj" class="">razvoj</a>
-        <a href="#" id="a-licno" class="">lično</a>
+        {% for cat in cat_list %}
+            <a href="{% url 'category' cat|slugify %}" id="blog-cat">{{ cat.name }}</a>
+        {% endfor %}
         <a id="menu" href="#" onclick="showDiv('search-form');">?</a>
     </div>
 

@@ -56,15 +56,25 @@
 
                     <div class="dropdown-collapse">
                       <div class="dropdown-content">
+                        <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
                         <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
                       </div>
                     </div>
                   </div>
                 {% else %}
-                  <a href="{% url 'blog' %}" class="nav-link">
+                  <div class="nav-link-dropdown">
+                    <a href="{% url 'blog' %}" class="nav-link">
                       <i class='bx bx-message-detail nav-icon'></i>
                       <span class="nav-name">Blog</span>
-                  </a>
+                      <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
+                    </a>
+
+                    <div class="dropdown-collapse">
+                      <div class="dropdown-content">
+                        <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
+                      </div>
+                    </div>
+                  </div>
                 {% endif %}
 
                 <a href="{% url 'contact' %}" class="nav-link">

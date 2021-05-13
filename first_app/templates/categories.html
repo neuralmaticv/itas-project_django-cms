@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Blog > {{ categories }} | {% endblock title %}
+
+{% block head %}
+
+{% if category_posts %}
+    <div class="blog-page">
+        <h1 class="blog-page-title cat-title"><a id="blog-link" href="{% url 'blog' %}">Blog</a></h1>
+        <h4 class="blog-cat-uptitle">Tagovani postovi:</h4>
+        <h1 class="blog-cat-title">{{ categories }}</h1>
+
+        <ul class="blog-posts">
+            {% for post in category_posts %}
+                <li>
+                    <span class="blog-post-author">{{ post.author.first_name }} {{ post.author.last_name }}</span>
+                    <a class="blog-post-link" href="{% url 'blog_post' post.pk %}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <div class="error-404">
+        <img src='{% static  'images/nopost_err.png' %}'>
+        <a id="btn-back" href="{% url 'blog' %}"><i class='bx bxs-chevrons-left'></i>Nazad na Blog stranicu</a>
+    </div>
+{% endif %}
+
+{% endblock head %}

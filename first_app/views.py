@@ -64,12 +64,13 @@ class blogView(ListView):
     def get_queryset(self):
         object_list = Post.objects.all()
         query = self.request.GET.get('search')
+        
         if query:
             object_list = object_list.filter(
                 Q(title__contains = query) | 
                 Q(body__contains = query))
         
-        return object_list
+        return object_list.order_by('-id')
 
 
 class blogCatsView(ListView):
@@ -102,7 +103,7 @@ class deletePostView(DeleteView):
 
 def categoryView(request, categories):
     cats = categories.replace('-', ' ')
-    category_posts = Post.objects.filter(category = cats)
+    category_posts = Post.objects.filter(category = cats).order_by('-id')
     context = {'categories': cats, 'category_posts': category_posts}
     return render(request, 'categories.html', context)
 

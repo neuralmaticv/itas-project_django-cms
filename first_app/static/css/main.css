@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-button {
+button:not(#btn-search) {
   cursor: pointer;
   border-radius: 20px;
   padding: 0 25px;
@@ -413,15 +413,21 @@ button {
 .blog-page-title:hover {
   letter-spacing: 10px;
 }
-.tagline a {
+.tagline p {
+  display: inline;
+}
+.tagline a,
+.tagline p {
   font-size: 1rem;
   background-color: var(--clr-light-gray);
   color: var(--clr-dark-gray);
   padding: 5px;
   border-radius: 5px;
   transition: .2s;
+  cursor: pointer;
 }
-.tagline a:hover {
+.tagline a:hover,
+.tagline p:hover {
   color: var(--clr-light);
   background-color: var(--clr-blue);
 }
@@ -612,6 +618,28 @@ button {
 .delete-post button:hover {
   background-color: var(--clr-red);
   color: var(--clr-light);
+}
+
+#search-form {
+  height: 50px;
+  margin: 20px 0 20px 0;
+}
+#search-form input {
+  float: left;
+  width: 80%;
+  border: 1px solid var(--clr-dark-gray);
+  padding: 10px;
+  font-size: 1.1rem;
+}
+#search-form button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid var(--clr-blue);
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
+  cursor: pointer;
 }
 
 

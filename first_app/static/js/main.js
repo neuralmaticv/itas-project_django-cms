@@ -20,3 +20,13 @@ links.forEach(l => {
     if (l.href === location.href)
         l.classList.add('active');
 })
+
+
+function showDiv(divID) {
+    let x = document.getElementById(divID);
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}

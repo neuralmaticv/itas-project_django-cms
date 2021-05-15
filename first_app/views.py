@@ -1,4 +1,5 @@
 from typing import List, cast
+from django.db.models import Q
 from first_app.models import Post
 from django.shortcuts import render
 from django.core.mail import send_mail
@@ -59,6 +60,16 @@ class blogView(ListView):
         context = super(blogView, self).get_context_data(*args, **kwargs)
         context["cat_list"] = cat_list
         return context
+
+    def get_queryset(self):
+        object_list = Post.objects.all()
+        query = self.request.GET.get('search')
+        if query:
+            object_list = object_list.filter(
+                Q(title__contains = query) | 
+                Q(body__contains = query))
+        
+        return object_list
 
 
 class blogCatsView(ListView):

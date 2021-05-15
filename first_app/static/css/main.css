@@ -465,6 +465,10 @@ button:not(#btn-search) {
   padding-top: 10px;
 }
 .blog-post-author {
+  float: left;
+  width: 150px;
+  word-wrap: break-word;
+  word-break: break-word;
   color: var(--clr-accent);
 }
 .blog-post-link {
@@ -506,6 +510,8 @@ button:not(#btn-search) {
   margin-bottom: 5rem;
 }
 .post-title {
+  word-wrap: break-word;
+  word-break: break-word;
   font-size: 5em;
   line-height: 1.1em;
   text-transform: uppercase;
@@ -515,6 +521,20 @@ button:not(#btn-search) {
   display: block;
   text-align: right;
   color: var(--clr-blue);
+}
+.post-cat a{
+  color: var(--clr-dark-gray);
+}
+.post-cat a{
+  background-color: var(--clr-light-gray);
+  padding: 5px;
+  border-radius: 5px;
+  transition: .2s;
+  cursor: pointer;
+}
+.post-cat a:hover {
+  color: var(--clr-light);
+  background-color: var(--clr-blue);
 }
 
 .post-edit {
@@ -888,5 +908,9 @@ textarea.contact-input {
   .blog-post-link {
     margin-left: 0;
     line-height: 1.4rem;
+  }
+
+  .post-title {
+    font-size: 3em; 
   }
 }

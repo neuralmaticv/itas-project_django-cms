@@ -47,34 +47,34 @@
                 </a>
 
                 {% if user.is_authenticated %}
-                  <div class="nav-link-dropdown">
-                    <a href="{% url 'blog' %}" class="nav-link">
-                      <i class='bx bx-message-detail nav-icon'></i>
-                      <span class="nav-name">Blog</span>
-                      <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
-                    </a>
+                <div class="nav-link-dropdown">
+                  <a href="{% url 'blog' %}" class="nav-link">
+                    <i class='bx bx-message-detail nav-icon'></i>
+                    <span class="nav-name">Blog</span>
+                    <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
+                  </a>
 
-                    <div class="dropdown-collapse">
-                      <div class="dropdown-content">
-                        <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
-                        <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
-                      </div>
+                  <div class="dropdown-collapse">
+                    <div class="dropdown-content">
+                      <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
+                      <a href="{% url 'add_post' %}" class="dropdown-item">Dodaj objavu</a>
                     </div>
                   </div>
+                </div>
                 {% else %}
-                  <div class="nav-link-dropdown">
-                    <a href="{% url 'blog' %}" class="nav-link">
-                      <i class='bx bx-message-detail nav-icon'></i>
-                      <span class="nav-name">Blog</span>
-                      <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
-                    </a>
+                <div class="nav-link-dropdown">
+                  <a href="{% url 'blog' %}" class="nav-link">
+                    <i class='bx bx-message-detail nav-icon'></i>
+                    <span class="nav-name">Blog</span>
+                    <i class='bx bxs-chevron-down nav-icon dropdown-icon'></i>
+                  </a>
 
-                    <div class="dropdown-collapse">
-                      <div class="dropdown-content">
-                        <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
-                      </div>
+                  <div class="dropdown-collapse">
+                    <div class="dropdown-content">
+                      <a href="{% url 'blog_cats' %}" class="dropdown-item">Kategorije</a>
                     </div>
                   </div>
+                </div>
                 {% endif %}
 
                 <a href="{% url 'contact' %}" class="nav-link">
@@ -87,7 +87,7 @@
                   <span class="nav-name">Karijere</span>
                 </a>
               </div>
-              
+
               <div class="nav-items">
                 <a class="nav-link" target="_blank" title="Zapratite nas na Twitter-u!" href="https://twitter.com/">
                   <i class='bx bxl-twitter nav-icon'></i>
@@ -109,20 +109,20 @@
               <div class="nav-items profile">
 
                 {% if user.is_authenticated %}
-                  <a href="{% url 'logout' %}" class="nav-link">
-                    <i class='bx bx-log-out nav-icon'></i>
-                    <span class="nav-name">Odjava</span>
-                  </a>
+                <a href="{% url 'logout' %}" class="nav-link">
+                  <i class='bx bx-log-out nav-icon'></i>
+                  <span class="nav-name">Odjava</span>
+                </a>
                 {% else %}
-                  <a href="{% url 'register' %}" class="nav-link">
-                    <i class='bx bxs-user-plus nav-icon'></i>
-                    <span class="nav-name">Registracija</span>
-                  </a>
+                <a href="{% url 'register' %}" class="nav-link">
+                  <i class='bx bxs-user-plus nav-icon'></i>
+                  <span class="nav-name">Registracija</span>
+                </a>
 
-                  <a href="{% url 'login' %}" class="nav-link">
-                    <i class='bx bx-log-in nav-icon'></i>
-                    <span class="nav-name">Prijava</span>
-                  </a>
+                <a href="{% url 'login' %}" class="nav-link">
+                  <i class='bx bx-log-in nav-icon'></i>
+                  <span class="nav-name">Prijava</span>
+                </a>
                 {% endif %}
 
               </div>
@@ -139,9 +139,7 @@
         {% endblock head %}
       </div>
     </div>
-    <!--
-        <img src='{% static  'images/nekaFotografija.png' %}'>
- -->
+    <div class="alan-btn"></div>
 
     <footer class="footer">
       <p>&copy; 2021 |
@@ -155,6 +153,100 @@
   </div>
 
   <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+  
+  <script>
+
+    function openHome() {
+      if (window.location.pathname == '') {
+        alanBtnInstance.playText("Home page is already open.");
+      } else {
+        alanBtnInstance.playText("Opening home page");
+        
+        setTimeout(() => {
+          document.location.href = 'http://127.0.0.1:8000/';
+        }, 1600);
+      }
+    }
+
+    function openAbout() {
+      if (window.location.pathname == '/about/') {
+        alanBtnInstance.playText("About page is already open.");
+      } else {
+        alanBtnInstance.playText("Opening about page");
+        
+        setTimeout(() => {
+          document.location.href = 'http://127.0.0.1:8000/about/';
+        }, 1600);
+      }
+    }
+
+    function openBlog() {
+      if (window.location.pathname === '/blog/') {
+        alanBtnInstance.playText("Blog page is already open.");
+      } else {
+        alanBtnInstance.playText("Opening blog page");
+        
+        setTimeout(() => {
+          document.location.href = 'http://127.0.0.1:8000/blog/';
+        }, 1600);
+      }
+    }
+
+    function openContact() {
+      if (window.location.pathname == '/contact/') {
+        alanBtnInstance.playText("Contact page is already open.");
+      } else {
+        alanBtnInstance.playText("Opening contact page");
+        
+        setTimeout(() => {
+          document.location.href = 'http://127.0.0.1:8000/contact/';
+        }, 1600);
+      }
+    }
+
+    function openCareers() {
+      if (window.location.pathname == '/careers/') {
+        alanBtnInstance.playText("Careers page is already open.");
+      } else {
+        alanBtnInstance.playText("Opening careers page");
+        
+        setTimeout(() => {
+          document.location.href = 'http://127.0.0.1:8000/careers/';
+        }, 1600);
+      }
+    }
+
+    function openRegistration() {
+      alanBtnInstance.playText("Opening registration page");
+        
+      setTimeout(() => {
+        document.location.href = 'http://127.0.0.1:8000/register/';
+      }, 1800);
+    }
+  
+
+    var alanBtnInstance = alanBtn({
+      key: "89335c590d63ff0ccc82d107eb6094072e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "open-home") {
+          openHome();
+        } else if (commandData.command === "open-about") {
+          openAbout();
+        } else if (commandData.command === "open-blog") {
+          openBlog();
+        } else if (commandData.command === "open-contact") {
+          openContact();
+        } else if (commandData.command === "open-careers") {
+          openCareers();
+        } else if (commandData.command === "open-registration") {
+          openRegistration();
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+    
+  </script>
 </body>
 
 </html>

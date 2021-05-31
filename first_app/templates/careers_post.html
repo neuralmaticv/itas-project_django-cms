@@ -14,11 +14,11 @@
             <div class="job-share">
             <ul class="post-share">
                 <li><i class='bx bx-share'></i></li>
-                <li><a class="share-btn" href="" target="_blank" title="Reddit">Re</a></li>           
-                <li><a class="share-btn" href="" target="_blank" title="Facebook">Fb</a></li>
-                <li><a class="share-btn" href="" target="_blank" title="Twitter">Tw</a></li>
-                <li><a class="share-btn" href="" target="_blank" title="Email">Em</a></li>
-                <li><a class="share-btn" href="" target="_blank" title="LinkedIn">Ln</a></li>
+                <li><a class="share-btn" href="https://reddit.com/submit?mini=true&url={{ request.build_absolute_uri }}&title={{ object.title }}" target="_blank" title="Reddit">Re</a></li>           
+                <li><a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https:{{ request.build_absolute_uri }}" target="_blank" title="Facebook">Fb</a></li>
+                <li><a class="share-btn" href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text={{ object.title }}" target="_blank" title="Twitter">Tw</a></li>
+                <li><a class="share-btn" href="mailto:?subject=Check out this job position at DigiTalk &body={{ request.build_absolute_uri }}" target="_blank" title="Email">Em</a></li>
+                <li><a class="share-btn" href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ object.title }}" target="_blank" title="LinkedIn">Ln</a></li>
             </ul>
             </div>
             

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime, date, time
+from django.db.models.base import Model
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 
@@ -39,3 +40,13 @@ class CareersPost(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name = "comments", on_delete = models.CASCADE)
+    name = models.CharField(max_length = 30)
+    email = models.EmailField()
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add = True)
+
+    def __str__(self):
+        return '%s - %s' % (self.post.title, self.name)

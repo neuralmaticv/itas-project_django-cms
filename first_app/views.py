@@ -1,15 +1,19 @@
 from typing import List, cast
 from django.db.models import Q
+from django.http import request
 from first_app.models import Post
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.core.mail import send_mail
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import CareersPost, Category, Post
+from .models import CareersPost, Category, Comment, Post
 from first_app import models
-from .forms import postForm, editForm
+from .forms import postForm, editForm, commentForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email
+from django.http import HttpResponse, HttpResponseNotFound
 
 
 def homePage(request):
@@ -82,6 +86,25 @@ class postDetailView(DetailView):
     model = Post
     template_name = 'blog_post.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comment_form'] = commentForm()
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        try: 
+            validate_email(request.POST.get('email'))
+            new_comment = Comment(name = self.request.POST.get('name'),
+                        body = request.POST.get('body'),     
+                        email = request.POST.get('email'),
+                        post = self.get_object())
+            new_comment.save()
+        except ValidationError:
+            new_comment = None
+
+        return self.get(self, request, *args, **kwargs)  
+ 
 
 class addPostView(CreateView):
     model = Post
@@ -112,4 +135,3 @@ class userRegisterView(generic.CreateView):
     form_class = UserCreationForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
-    

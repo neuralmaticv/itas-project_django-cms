@@ -32,6 +32,39 @@
         
     <p class="post-cat"><a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a></p>
 
+    <hr>
+    <h3>Komentari:</h3>
+    {% if not post.comments.all %}
+        <p>Trenutno nema komentara na ovaj post!</p>
+        <div class="add-comment-form">
+            <p>Ostavi komentar</p>
+            <p id="desc">Tvoja e-mail adresa neće biti objavljena.</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button>Ostavi komentar</button>
+            </form>
+        </div>
+    {% else %}
+        {% for c in post.comments.all %}
+            <div class="comment">
+                <p class="comment-author">{{ c.name }} <br> <span class="comment-info">{{ c.date }}</span></p>
+                <div class="comment-msg">
+                    {{ c.body }}
+                </div>
+            </div>
+        {% endfor %}
+        <div class="add-comment-form">
+            <p>Ostavi komentar</p>
+            <p id="desc">Tvoja e-mail adresa neće biti objavljena.</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button>Ostavi komentar</button>
+            </form>
+        </div>
+    {% endif %}
+
 </div>
 
 {% endblock head %}

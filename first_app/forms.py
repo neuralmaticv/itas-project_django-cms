@@ -2,7 +2,8 @@ from django import forms
 from django.db import models
 from django.db.models import fields
 from django.forms import widgets
-from .models import Category, Post
+from .models import Category, Comment, Post
+
 
 choices = Category.objects.all().values_list('name', 'name')
 choice_list = []
@@ -28,4 +29,21 @@ class editForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'add-post-form'}),
             'category': forms.Select(choices = choice_list, attrs={'class': 'add-post-form'}),
             'body': forms.Textarea(attrs={'class': 'add-post-form'}),
+        }
+
+
+class commentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'body')
+    
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'comment-input-name', 'placeholder': 'Unesite ime'}),
+            'email': forms.TextInput(attrs={'class': 'comment-input-mail', 'placeholder': 'Unesite email'}),
+            'body': forms.Textarea(attrs={'class': 'comment-input-body', 'placeholder': 'Unesite komentar...'}),
+        }
+        labels = {
+            'name': 'Ime',
+            'email': 'Email',
+            'body': 'Komentar'
         }

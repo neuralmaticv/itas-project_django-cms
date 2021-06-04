@@ -1,7 +1,7 @@
 from django.db.models import Q
 from first_app.models import Post
 from django.shortcuts import render
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import CareersPost, Category, Comment, Post
 from .forms import postForm, editForm, commentForm
@@ -27,12 +27,15 @@ def contactPage(request):
         subject = request.POST['subject']
         message = request.POST['message']
 
-        send_mail(
+        email = EmailMessage(
             subject + " | from user " + name, # subject
             message,                    # message
             email,                      # from email
             ['vladocodes@gmail.com'],   # to email
+            reply_to = [email],
         )
+
+        email.send()
 
         return render(request, 'contact.html', {'name': name})
     else:

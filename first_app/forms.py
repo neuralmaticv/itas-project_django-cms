@@ -1,7 +1,4 @@
 from django import forms
-from django.db import models
-from django.db.models import fields
-from django.forms import widgets
 from .models import Category, Comment, Post
 
 
@@ -15,10 +12,10 @@ class postForm(forms.ModelForm):
         model = Post
         fields = ('title', 'author', 'category', 'body')
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'add-post-form'}),
-            'author': forms.Select(attrs={'class': 'add-post-form'}),
-            'category': forms.Select(choices = choice_list, attrs={'class': 'add-post-form'}),
-            'body': forms.Textarea(attrs={'class': 'add-post-form'}),
+            'title': forms.TextInput(attrs = {'class': 'add-post-form'}),
+            'author': forms.Select(attrs = {'class': 'add-post-form'}),
+            'category': forms.Select(choices = choice_list, attrs = {'class': 'add-post-form'}),
+            'body': forms.Textarea(attrs = {'class': 'add-post-form'}),
         }
 
 class editForm(forms.ModelForm):
@@ -26,9 +23,9 @@ class editForm(forms.ModelForm):
         model = Post
         fields = ('title', 'category', 'body')
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'add-post-form'}),
-            'category': forms.Select(choices = choice_list, attrs={'class': 'add-post-form'}),
-            'body': forms.Textarea(attrs={'class': 'add-post-form'}),
+            'title': forms.TextInput(attrs = {'class': 'add-post-form'}),
+            'category': forms.Select(choices = choice_list, attrs = {'class': 'add-post-form'}),
+            'body': forms.Textarea(attrs = {'class': 'add-post-form'}),
         }
 
 
@@ -38,9 +35,9 @@ class commentForm(forms.ModelForm):
         fields = ('name', 'email', 'body')
     
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'comment-input-name', 'placeholder': 'Unesite ime'}),
-            'email': forms.TextInput(attrs={'class': 'comment-input-mail', 'placeholder': 'Unesite email'}),
-            'body': forms.Textarea(attrs={'class': 'comment-input-body', 'placeholder': 'Unesite komentar...'}),
+            'name': forms.TextInput(attrs = {'class': 'comment-input-name', 'placeholder': 'Unesite ime'}),
+            'email': forms.TextInput(attrs = {'class': 'comment-input-mail', 'placeholder': 'Unesite email'}),
+            'body': forms.Textarea(attrs = {'class': 'comment-input-body', 'placeholder': 'Unesite komentar...'}),
         }
         labels = {
             'name': 'Ime',

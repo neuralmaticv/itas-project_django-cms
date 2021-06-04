@@ -1,19 +1,15 @@
-from typing import List, cast
 from django.db.models import Q
-from django.http import request
 from first_app.models import Post
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.core.mail import send_mail
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import CareersPost, Category, Comment, Post
-from first_app import models
 from .forms import postForm, editForm, commentForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
-from django.http import HttpResponse, HttpResponseNotFound
 
 
 def homePage(request):

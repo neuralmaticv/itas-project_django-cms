@@ -240,6 +240,9 @@ button:not(#btn-search) {
 .nav-link-dropdown:hover .dropdown-icon {
   transform: rotate(180deg);
 }
+.profile a:last-child {
+  margin-left: -4px;
+}
 
 
 /*---------- FOOTER ----------*/
@@ -269,7 +272,7 @@ button:not(#btn-search) {
 
 /*---------- HOME ----------*/
 .home-grid {
-  margin: 200px 0;
+  margin: 100px 0;
 }
 .home-grid img {
   max-width: 100%;
@@ -609,6 +612,24 @@ button:not(#btn-search) {
   background-color: var(--clr-blue);
   color: var(--clr-light);
 }
+.add-post-form form p label{
+  display: block;
+}
+.add-post-form form p span,
+.add-post-form form ul {
+  display: block;
+  color: var(--clr-accent);
+  font-size: 14px;
+}
+.add-post-form form p label {
+  color: var(--clr-blue);
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+}
+.add-post-form form p input {
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 3px;
+}
 
 .delete-post {
   width: 100%;
@@ -663,8 +684,8 @@ button:not(#btn-search) {
 }
 
 .comment {
-  border: 1px solid var(--clr-primary-400);
-  box-shadow: 0 10px 6px -6px var(--clr-primary-400);
+  border: 3px solid var(--clr-blue);
+  box-shadow: 0 13px 6px -6px var(--clr-dark-gray);
   margin: 10px 0 10px 0;
   padding: 15px;
 }
@@ -966,13 +987,35 @@ textarea.contact-input {
     row-gap: 3rem;
   }
 
+  .home-grid {
+    margin: 100px 0;
+  }
+  .home-grid img {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .home-grid-item {
+    border: 5px solid var(--clr-blue);
+    border-radius: 50px 25px;
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .home-grid-item i {
+    border: 5px solid var(--clr-blue);
+  }
+  .home-grid-item i:hover {
+    border: 5px solid var(--clr-blue);
+  }
+
   .blog-posts {
     margin: 0;
     padding: 0;
   }
   .blog-posts li {
     display: block;
-    margin-bottom: 2em;
+    margin-bottom: 3.5em;
     padding-top: 20px;
   }
   .blog-post-author,
@@ -988,6 +1031,11 @@ textarea.contact-input {
   .blog-post-link {
     margin-left: 0;
     line-height: 1.4rem;
+  }
+  
+  .job-opportunity p {
+    width: 100%;
+    display: inline-block;
   }
 
   .post-title {

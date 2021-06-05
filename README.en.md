@@ -19,11 +19,6 @@ To verify the version of pip that is available, run the following command:
 py -m pip --version
 ```
 
-To install Django and all necessary requirements, run the following command:
-```bash
-pip install -r requirements.txt
-```
-
 To create virtual environment use `venv` command:
 ```bash
 py -m venv env
@@ -33,6 +28,11 @@ here we creates a virtual environment in a folder named *env*, but you can speci
 Now activate the virtual environment with:
 ```bash
 .\env\Scripts\activate
+```
+
+To install Django and all necessary requirements, run the following command:
+```bash
+pip install -r requirements.txt
 ```
 
 To set up your models, run the Django migrations with the following command:

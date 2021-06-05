@@ -25,12 +25,6 @@ Uvjerite se da imate i najnoviju verziju pip-a pomoću komande:
 py -m pip --version
 ```
 
-Instalirajte Django:
-
-```bash
-pip install -r requirements.txt
-```
-
 Kreirajte virtuelno okruzenje:
 
 ```bash
@@ -40,6 +34,12 @@ py -m venv env
 Da aktivirate virtuelno okruzenje pozicionirajte se u direktorijum Scripts i unesite:
 ```bash
 activate
+```
+
+Instalirajte Django:
+
+```bash
+pip install -r requirements.txt
 ```
 
 Primjenite potrebne migracije:

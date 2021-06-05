@@ -375,6 +375,7 @@ button:not(#btn-search) {
   text-align: justify;
 }
 .about-question {
+  line-height: 1.8;
   margin: 100px 0 50px 0;
   font-family: var(--ff-heading);
   font-weight: var(--fw-bold);

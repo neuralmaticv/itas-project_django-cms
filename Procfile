@@ -1,0 +1,1 @@
+web: gunicorn itas_cms.wsgi --log-file -

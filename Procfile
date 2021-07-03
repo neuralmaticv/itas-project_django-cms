@@ -1,1 +1,1 @@
-web: gunicorn itas_cms.wsgi --log-file -
+web: gunicorn itas_cms.wsgi

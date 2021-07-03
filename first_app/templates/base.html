@@ -156,6 +156,8 @@
   <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
 
   <script>
+    let url = window.location.protocol + "//" + window.location.host;
+
     function openHome() {
       if (window.location.pathname == '') {
         alanBtnInstance.playText("Home page is already open.");
@@ -163,7 +165,7 @@
         alanBtnInstance.playText("Opening home page");
 
         setTimeout(() => {
-          document.location.href = 'http://127.0.0.1:8000/';
+          document.location.href = url;
         }, 1600);
       }
     }
@@ -175,7 +177,7 @@
         alanBtnInstance.playText("Opening about page");
 
         setTimeout(() => {
-          document.location.href = 'http://127.0.0.1:8000/about/';
+          document.location.href = url + '/about/';
         }, 1600);
       }
     }
@@ -187,7 +189,7 @@
         alanBtnInstance.playText("Opening blog page");
 
         setTimeout(() => {
-          document.location.href = 'http://127.0.0.1:8000/blog/';
+          document.location.href = url + '/blog/';
         }, 1600);
       }
     }
@@ -199,7 +201,7 @@
         alanBtnInstance.playText("Opening contact page");
 
         setTimeout(() => {
-          document.location.href = 'http://127.0.0.1:8000/contact/';
+          document.location.href = url + '/contact/';
         }, 1600);
       }
     }
@@ -211,7 +213,7 @@
         alanBtnInstance.playText("Opening careers page");
 
         setTimeout(() => {
-          document.location.href = 'http://127.0.0.1:8000/careers/';
+          document.location.href = url + '/careers/';
         }, 1600);
       }
     }
@@ -220,7 +222,7 @@
       alanBtnInstance.playText("Opening registration page");
 
       setTimeout(() => {
-        document.location.href = 'http://127.0.0.1:8000/register/';
+        document.location.href = url + '/register/';
       }, 1800);
     }
 

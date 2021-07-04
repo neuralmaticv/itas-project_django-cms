@@ -2,8 +2,49 @@
 
 Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/README.en.md).
 
+## Zadatak:
+Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS). Preporučena je, ali ne i obavezna, upotreba Wordpress-a ili Django sistema. Sadržaj web sajta treba da bude u direktnoj vezi sa izabranom temom.  
 
-# Pokretanje projekta lokalno
+## Opis projekta:
+**Tema projekta:** Algoritmi za prepoznavanje govora
+
+**Funkcionalnosti i osobine sajta:**  
+- [x] jednostavan i moderan dizajn
+- [x] dizajn prilagođen veličini uređaja
+- [x] dizajn grafičkih ele
+- [x] slanje upita/mail-ova
+- [x] registracija korisnika
+- [x] objavljivanje sadržaja
+- [x] uređivanje i kategorizacija sadržaja
+- [x] dijeljenje sadržaja na društvenim mrežama
+- [x] komentarisanje sadržaja
+- [x] glasovni asistent
+
+  
+**Osnovne funkcionalnosti glasovnog asistenta Alan AI:**
+-   Glasovno pozivanje
+	> Hey | Hello Alan
+-   Informacije o stranici
+	> Who is the creator of this site | Tell me something about Digi Talk
+-   Navigacija po stranici
+	> open `naziv stranice`  
+	home | about | blog | contact | careers | registration page
+
+## Korištene tehnologije:
+<p>
+<img src="https://img.shields.io/badge/Django%20-%23092e20.svg?&style=for-the-badge&logo=django&logoColor=white"/>&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/python%20-%234b8bbe.svg?&style=for-the-badge&logo=python&logoColor=ffd43b"/>&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/javascript%20-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black"/>&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/html5%20-%23e34f26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/CSS3-1572B6?&style=for-the-badge&logo=css3&logoColor=white"/>
+</p>
+
+Alat korišten pri izradi grafičkih elemenata - [Canva](https://www.canva.com/)  
+Više o glasovnom asistentu **Alan AI** možete pronaći na [alan.app](https://alan.app/)
+
+---
+
+## Pokretanje projekta lokalno
 
 Prvo, klonirajte ovaj repozitorijum na vasu lokalnu masinu pomoću komande:
 
@@ -39,7 +80,7 @@ activate
 Instalirajte Django:
 
 ```bash
-pip install -r requirements.txt
+pip install -r local_requirements.txt
 ```
 
 Primjenite potrebne migracije:
@@ -64,5 +105,5 @@ Za deaktiviranje virtuelnog okruzenja unesite:
 deactivate
 ```
 
-# Licenca
+## Licenca
 Ovaj projekat se nalazi pod [MIT licencom](https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).  

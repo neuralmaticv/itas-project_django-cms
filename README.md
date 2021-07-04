@@ -1,11 +1,24 @@
 # Projekat za predmet Informacione tehnologije i drustvo
 
-Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/README.en.md).
+Stranica je dostupna na [digitalk.herokuapp.com](https://digitalk.herokuapp.com/)
+<!-- Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/README.en.md). -->
+
+
+## Sadržaj:
+* [Zadatak](#zadatak)
+	* [Opis projekta](#opis-projekta)
+	* [Tehnologije i  alati](#korištene-tehnologije-i-alati)
+* [Screenshots](#screenshots)
+* [Pokretanje](#pokretanje-projekta-lokalno)
+* [Licenca](#licenca)
+
+---
+
 
 ## Zadatak:
 Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS). Preporučena je, ali ne i obavezna, upotreba Wordpress-a ili Django sistema. Sadržaj web sajta treba da bude u direktnoj vezi sa izabranom temom.  
 
-## Opis projekta:
+### Opis projekta:
 **Tema projekta:** Algoritmi za prepoznavanje govora
 
 **Funkcionalnosti i osobine sajta:**  
@@ -22,15 +35,15 @@ Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS
 
   
 **Osnovne funkcionalnosti glasovnog asistenta Alan AI:**
--   Glasovno pozivanje
+-   **Glasovno pozivanje**
 	> Hey | Hello Alan
--   Informacije o stranici
+-   **Informacije o stranici**
 	> Who is the creator of this site | Tell me something about Digi Talk
--   Navigacija po stranici
+-   **Navigacija po stranici**
 	> open `naziv stranice`  
 	home | about | blog | contact | careers | registration page
 
-## Korištene tehnologije:
+### Korištene tehnologije i alati:
 <p>
 <img src="https://img.shields.io/badge/Django%20-%23092e20.svg?&style=for-the-badge&logo=django&logoColor=white"/>&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/python%20-%234b8bbe.svg?&style=for-the-badge&logo=python&logoColor=ffd43b"/>&nbsp;&nbsp;&nbsp;
@@ -39,8 +52,17 @@ Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS
   <img src="https://img.shields.io/badge/CSS3-1572B6?&style=for-the-badge&logo=css3&logoColor=white"/>
 </p>
 
-Alat korišten pri izradi grafičkih elemenata - [Canva](https://www.canva.com/)  
-Više o glasovnom asistentu **Alan AI** možete pronaći na [alan.app](https://alan.app/)
+**Alat korišten pri izradi grafičkih elemenata - [Canva](https://www.canva.com/)**   
+**Više o glasovnom asistentu ***Alan AI*** možete pronaći na [alan.app](https://alan.app/)**  
+**Hosting: [Heroku](https://www.heroku.com/home)**  
+
+---
+
+## Screenshots: 
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="screenshot of desktop view 1 - home page" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/desktop01.png"> | <img width="1604" alt="screenshot of desktop view 2 - blog page" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/desktop02.png"> | <img width="1604" alt="screenshot of desktop view 3 - login page" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/desktop03.png">|
+|<img width="1604" alt="screenshot of mobile view 1 - about us page" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/mobile01.jpg"> | <img width="1604" alt="screenshot of mobile view 2 - careers page" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/mobile02.jpg"> | <img width="1604" alt="screenshot of mobile view 3 - nav menu" src="https://github.com/vladocodes/PMF_ITAS_CMS/blob/master/static/images/mobile03.jpg">|
 
 ---
 
@@ -104,6 +126,6 @@ Za deaktiviranje virtuelnog okruzenja unesite:
 ```bash
 deactivate
 ```
-
+---
 ## Licenca
 Ovaj projekat se nalazi pod [MIT licencom](https://github.com/vladocodes/PMF-ITAS-project/blob/master/LICENSE).  

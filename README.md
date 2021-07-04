@@ -5,8 +5,8 @@ Stranica je dostupna na [digitalk.herokuapp.com](https://digitalk.herokuapp.com/
 
 
 ## Sadržaj:
-* [Zadatak](#zadatak)
-	* [Opis projekta](#opis-projekta)
+* [Opis projekta](#opis-projekta)
+	* [Zadatak](#zadatak)
 	* [Tehnologije i  alati](#korištene-tehnologije-i-alati)
 * [Screenshots](#screenshots)
 * [Pokretanje](#pokretanje-projekta-lokalno)
@@ -15,11 +15,13 @@ Stranica je dostupna na [digitalk.herokuapp.com](https://digitalk.herokuapp.com/
 ---
 
 
-## Zadatak:
+## Opis projekta:
+**Tema projekta:** Algoritmi za prepoznavanje govora
+
+### Zadatak:
 Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS). Preporučena je, ali ne i obavezna, upotreba Wordpress-a ili Django sistema. Sadržaj web sajta treba da bude u direktnoj vezi sa izabranom temom.  
 
-### Opis projekta:
-**Tema projekta:** Algoritmi za prepoznavanje govora
+</br>
 
 **Funkcionalnosti i osobine sajta:**  
 - [x] jednostavan i moderan dizajn
@@ -33,7 +35,9 @@ Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS
 - [x] komentarisanje sadržaja
 - [x] glasovni asistent
 
-  
+
+</br>
+
 **Osnovne funkcionalnosti glasovnog asistenta Alan AI:**
 -   **Glasovno pozivanje**
 	> Hey | Hello Alan
@@ -42,6 +46,8 @@ Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS
 -   **Navigacija po stranici**
 	> open `naziv stranice`  
 	home | about | blog | contact | careers | registration page
+
+</br>
 
 ### Korištene tehnologije i alati:
 <p>

@@ -108,7 +108,7 @@ activate
 Instalirajte Django:
 
 ```bash
-pip install -r local_requirements.txt
+pip install -r requirements.txt
 ```
 
 Primjenite potrebne migracije:

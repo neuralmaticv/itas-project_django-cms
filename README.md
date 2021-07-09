@@ -26,7 +26,7 @@ Podrazumijeva izradu web sajta u nekom od sistema za upravljanje sadržajem (CMS
 **Funkcionalnosti i osobine sajta:**  
 - [x] jednostavan i moderan dizajn
 - [x] dizajn prilagođen veličini uređaja
-- [x] dizajn grafičkih ele
+- [x] dizajn grafičkih elemenata
 - [x] slanje upita/mail-ova
 - [x] registracija korisnika
 - [x] objavljivanje sadržaja

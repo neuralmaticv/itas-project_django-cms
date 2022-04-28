@@ -4,9 +4,6 @@ Read this guide in [English](https://github.com/vladocodes/PMF_ITAS_CMS/blob/mas
 
 ---  
 
-Stranica je dostupna na [digitalk.herokuapp.com](https://digitalk.herokuapp.com/)
-
-
 ## Sadržaj:
 * [Opis projekta](#opis-projekta)
 	* [Zadatak](#zadatak)

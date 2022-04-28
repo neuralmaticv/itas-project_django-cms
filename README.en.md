@@ -1,8 +1,5 @@
 # College project for Information Technology and Society course 
 
-The page is available at [digitalk.herokuapp.com](https://digitalk.herokuapp.com/)
-
-
 ## Table of contents:
 * [Project description](#project-description)
 	* [Assignment](#assignment)
